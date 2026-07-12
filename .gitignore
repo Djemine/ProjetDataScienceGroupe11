@@ -1,0 +1,26 @@
+# Environnement virtuel
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Variables d'environnement
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# ChromaDB (si tu ne veux pas versionner la base)
+chroma_db/
+chromadb/
+
+# Bases de données
+*.db
+*.sqlite3
+
+# Logs
+*.log

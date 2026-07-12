@@ -1,0 +1,16 @@
+DENGUE - DEFINITION DE CAS OFFICIELLE
+(Source : Guide Technique pour la Surveillance Intégrée de la Maladie et la Riposte au Burkina Faso, Ministère de la Santé, Juillet 2012)
+
+Cas suspect de dengue (définition utilisée par les services de santé) :
+Toute personne présentant une maladie fébrile aiguë d'une durée comprise entre 2 et 7 jours, s'accompagnant d'au moins 2 des symptômes suivants :
+- Céphalées (maux de tête)
+- Douleur rétro-orbitale (derrière les yeux)
+- Myalgie (douleurs musculaires)
+- Arthralgie (douleurs articulaires)
+- Éruption cutanée
+- Manifestations hémorragiques
+- Leucopénie (taux bas de globules blancs, détecté par analyse biologique)
+
+Cas confirmé : cas confirmé par le laboratoire (sérologie positive des IgM, augmentation des titres d'IgG, détection du virus par PCR ou isolement viral).
+
+Cette définition officielle sert de repère aux professionnels de santé pour la surveillance épidémiologique. Pour toute personne présentant une fièvre accompagnée de plusieurs de ces symptômes, la consultation d'un centre de santé est recommandée afin de confirmer le diagnostic, notamment par test de laboratoire lorsque disponible.

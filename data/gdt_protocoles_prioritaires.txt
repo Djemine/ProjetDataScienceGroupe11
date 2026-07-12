@@ -1,0 +1,1044 @@
+                                          I. PALUDISME
+         1.1 DEFINITION DE CAS
+ 1.1.1 Au niveau des formations sanitaires
+Un cas de paludisme se définit comme suit :
+Une fièvre (température axillaire non corrigée supérieure ou égale à 37,5°C) ou antécédent de corps
+chaud dans les soixante-douze (72) dernières heures,
+Et
+la mise en évidence du plasmodium à l’examen microscopique par la goutte épaisse/frottis sanguin ou
+par la positivité du test de diagnostic rapide (TDR).
+ 1.1.2      Au niveau communautaire
+Un cas de paludisme se définit comme suit : notion de corps chaud ou antécédent de corps chaud dans
+les 72 dernières heures ou fièvre (température axillaire non corrigée supérieure ou égale à 37,5°C) et
+la positivité du test de diagnostic rapide (TDR).
+         1.2 CLASSIFICATION DES CAS DE PALUDISME
+De manière opérationnelle, il existe deux formes cliniques de paludisme : le paludisme simple et le
+paludisme grave.
+ 1.2.1 Paludisme simple
+Il se définit par :
+     -    Une fièvre (température axillaire non corrigée supérieure ou égale à 37,5°C) ou un antécédent
+          de corps chaud dans les 72 dernières heures
+Et
+     -    La mise en évidence du plasmodium à l’examen microscopique par goutte épaisse/frottis
+          sanguin ou la positivité du test de diagnostic rapide (TDR).
+Et
+     -    Une absence de signes de gravité ou de signes généraux de danger (voir définition de
+          paludisme grave).
+N.B. : Le cas de paludisme simple doit être précocement et correctement pris en charge.
+
+
+
+ 1.2.2 Paludisme grave
+Il se définit comme étant un cas de paludisme à Plasmodium falciparum avec au moins un (01) des
+signes de gravité suivants :
+Signes cliniques :
+● Troubles de la conscience ou léthargie ;
+
+● Convulsions répétées : plus de deux épisodes en 24 h ;
+
+● Pâleur sévère (anémie grave) ;
+
+● Prostration (faiblesse généralisée, de sorte que le patient soit incapable de s’asseoir, de se tenir
+debout ou de marcher sans assistance) ;
+                                                   156
+
+
+● Détresse respiratoire (association variable de modification de la fréquence respiratoire, de signes de
+lutte et de cyanose)
+
+● Œdème Aigu du Poumon (OAP) ;
+
+● Choc ou Collapsus cardio-vasculaire (hypotension, tension artérielle systolique < 80 mm Hg chez
+l’adulte et < 50 mm Hg chez l’Enfant, pouls rapide, extrémités froides,) ;
+
+● Hémoglobinurie (Urines foncées ou coca cola) ;
+
+● Ictère franc ;
+
+● Hémorragie spontanée .
+Signes biologiques et radiologiques :
+● Hypoglycémie (< 2,2 mmol/l ou < 40 mg/dl) ;
+
+● Hyperlactatémie (> 5 mmol/L) ;
+
+● Insuffisance rénale (créatinémie : > 265μmol/L chez l’adulte, > à la valeur normale pour l’âge chez
+l’Enfant) ;
+
+● Hyperparasitémie (supérieur à 5% chez les sujets non immuns et inférieur à 10% ou >250000 formes
+asexuées/μL chez les sujets immuns) ;
+
+● Anémie grave (taux d’hémoglobine < 5g/dl ou taux d’hématocrite <15%) ;
+
+● Acidose métabolique (pH <7,25 mmol/L ou bicarbonates <15 mmol/L,…)
+
+● Oedème pulmonaire (à la radiographie).
+Chez les Enfants, un cas de paludisme associé à au moins un des signes généraux de danger suivants
+est considéré comme paludisme grave :
+- Convulsions actuelles ou antécédents de convulsions ;
+
+- Vomissements incoercibles (Vomit tout ce qu’il consomme) ;
+
+- Léthargie / Inconscience ;
+
+- Incapacité de boire ou de téter.
+
+
+N.B. :
+Pour standardiser la collecte de l’information, les appellations « accès pernicieux », « syndrome palustre
+», « accès palustre», « paludisme », « paludisme chronique », « neuropaludisme » ne devraient donc
+plus être évoquées dans les supports de collecte de données.
+                                                  157
+
+
+       1.3 TRAITEMENT DU PALUDISME
+Traitement du paludisme simple
+    A. Traitement du paludisme simple en général
+Les médicaments recommandés pour le traitement du paludisme simple au Burkina
+
+Faso sont les combinaisons thérapeutiques à base d’artémisinine (ACT) par voie orale :
+
+    ● Artémether + Luméfantrine (AL) ou
+
+    ● Artésunate + Amodiaquine (ASAQ) ou
+
+    ● Dihydroartémisinine + Pipéraquine (DHA-PPQ).
+
+Tableau 4: Posologie combinaison fixe Artéméther + Luméfantrine par voie orale selon les
+dosages
+
+ Poids (âge)            Présentations                   Jour 1            Jour 2              Jour 3
+     >5 kg        Artémether 20 mg                1/2cp x 2/J        1/2cp x 2/J         1/2cp x 2/J
+                  Luméfantrine 120 mg
+     5 à 9 kg     Artémether 20 mg                1/2cp x 2/J        1/2cp x 2/J         1/2cp x 2/J
+     (<1 an)      Luméfantrine 120 mg
+   10 à 14 kg     Artémether 20 mg                1cp x 2/J          1cp x 2/J           1cp x 2/J
+   (1 - 4 ans)    Luméfantrine 120 mg
+ 15 à < 24 kg     Artémether 40 mg                1cp x 2/J          1cp x 2/J           1cp x 2/J
+    (4 -8 ans)    Luméfantrine 240 mg
+   25 à 34 kg     Artémether 60 mg                1cp x 2/J          1cp x 2/J           1cp x 2/J
+ (8 – 12 ans)     Luméfantrine 360 mg
+      >35 kg      Artémether 80 mg                1cp x 2/J          1cp x 2/J           1cp x 2/J
+   (> 12 ans)     Luméfantrine 480 mg
+NB :
+
+    ● Il est souhaitable de l’administrer avec les aliments gras ;
+
+    ● La deuxième dose du premier jour de traitement doit être administrée 8 heures après la
+        première prise ;
+
+    ● Les doses du deuxième et du troisième jour sont administrées en 2 prises avec un intervalle
+        de 12 heures ;
+
+    ● Dans les formations sanitaires le poids sera préféré à l’âge dans le traitement du malade.
+                                                               158
+
+
+  Tableau 5: Posologie combinaison fixe Artésunate + Amodiaquine par voie orale selon les dosages
+
+
+     Poids (âge)                        Présentations                       Jour 1           Jour 2           Jour 3
+<4,5 kg                    Artésunate 25 mg                          1 cp             1 cp             1 cp
+                           Amodiaquine 67,5 mg
+>4,5 à <9 kg               Artésunate 25 mg                          1 cp             1 cp             1 cp
+(2 -11mois)                Amodiaquine 67,5 mg
+>9 à <18 kg                Artésunate 50 mg                          1 cp             1 cp             1 cp
+(1 -5 ans)                 Amodiaquine 135 mg
+>18à <36 kg                Artésunate 100 mg                         1 cp             1 cp             1 cp
+(6 - 13 ans)               Amodiaquine 270 mg
+>36 kg                     Artésunate 100 mg                         2 cp             2 cp             2 cp
+(> 14 ans)                 Amodiaquine 270 mg
+ N.B. : la dose journalière est administrée en prise unique.
+
+ Tableau 6 : Combinaison fixe Dihydroartemisinine + Pipéraquine (DHA-PPQ) selon le dosage
+
+ Poids (âge)                    Présentation/dosage                          Jour 1          Jour 2           Jour 3
+<5 kg                  Dihydroartemisinine 20mg +
+                      Pipéraquine 160mg                                       1cp             1cp              1cp
+ 5 à <8 kg             Dihydroartemisinine        20mg+                       1cp             1cp              1cp
+ (6 -12 mois)          Pipéraquine 160mg
+ 8 à <11 Kg           Dihydroartemisinine         20mg+                     1+1/2cp          1+1/2cp      1+1/2cp
+ (1-3 ans)             Pipéraquine 160mg
+ 11 à <17 kg           Dihydroartemisinine        40mg+                       1cp             1cp              1cp
+ (3-5 ans)             Pipéraquine 320mg
+ 17 à <25 kg           Dihydroartemisinine        40mg+                     1+1/2cp          1+1/2cp      1+1/2cp
+ (5-8 ans)             Pipéraquine 320mg
+ 25 à <36 kg           Dihydroartemisinine        40mg+                       2cp             2cp              2cp
+ (8 -15 ans)           Pipéraquine 320mg
+ 36 à <60 kg           Dihydroartemisinine        40mg+                       3cp             3cp              3cp
+ (≥15 ans)             Pipéraquine 320mg
+ 60 à <80 kg           Dihydroartemisinine        40mg+                       4cp             4cp              4cp
+ (≥15 ans)             Pipéraquine 320mg
+≥80kg                  Dihydroartemisinine        40mg+                       5cp             5cp              5cp
+(≥15 ans)              Pipéraquine 320mg
+
+
+     B. Traitement du paludisme simple chez la femme enceinte
+ Les médicaments utilisés pour le traitement du paludisme simple chez la femme enceinte sont la quinine
+ et les ACT en comprimé.
+     ● La quinine est le médicament recommandé pour le traitement du paludisme simple chez la
+          femme enceinte quel que soit l’âge de la grossesse, à la posologie de 8 mg/Kg de quinine base
+          (sans dépasser 480 mg par prise) toutes les 8 heures pendant 7 jours par voie orale.
+     ● Les ACT sont aussi utilisables chez la femme enceinte après le premier trimestre de la
+          grossesse.
+                                                    159
+
+
+Traitement du paludisme grave
+    A. Traitement Pré transfert
+    ➢ Niveau communautaire
+Les agents de santé à base communautaire (ASBC) administrent une dose d'artémisinine (artesunate)
+suppositoires chez les Enfants âgés de 6 mois à 6 ans pour le traitement pré transfert.
+
+
+Tableau 7: Dosage de l’Artesunate rectal
+
+           Age              Poids             Artesunate rectal (10mg par Kg de poids corporel
+6 mois à ≤ 3 ans        5 à ≤ 14kg                              1 x 100 mg capsule
+
+>3 à 6 ans              >14 à 20 kg                             2 x 100mg capsule
+
+
+En cas de fièvre, un enveloppement humide est indispensable avant le transfert du malade vers une
+formation sanitaire
+    ➢ Niveau des formations sanitaires périphériques
+Le paludisme grave est une urgence médicale. Il doit être pris en charge au sein d’une formation
+sanitaire de référence ou dans toute autre structure sanitaire disposant d’un plateau technique
+adéquat.
+Avant tout transfert dans un centre de référence, un traitement pré-transfert doit être instauré :
+ -    prendre la voie veineuse avec du SGI 5% ;
+
+ -    administrer un antipaludique recommandé (artesunate/artemether/quinine par voie parentérale)
+      ;
+ -    prendre en charge les signes généraux de danger;
+
+ -    orienter le patient vers un centre de santé offrant une gestion complète comportant, des examens
+      complémentaires, l’administration d’antipaludiques et des mesures générales.
+Posologie
+       - Artésunate injectable
+Chez l’Enfant de moins de 20 kg : 3 mg/kg de poids corporel.
+
+Chez l’adulte comme chez l’Enfant de 20 kg et plus : 2,4 mg/kg de poids corporel
+
+Le traitement sera administré par voie intraveineuse de préférence ou en intramusculaire (si difficultés
+pour la prise de la voie veineuse) dès l’admission (temps zéro), puis au bout de 12 et 24 heures et
+ensuite une fois par jour jusqu’à possibilité de la voie orale. Ne pas dépasser sept (7) jours de traitement
+à l’artésunate injectable
+      - Artéméther injectable
+Chez l’adulte comme chez l’Enfant : 3,2 mg/kg de poids corporel en intramusculaire dès l’admission,
+puis 1,6 mg/kg de poids corporel par jour jusqu’à possibilité de la voie orale. Ne pas dépasser sept (7)
+jours de traitement à l’artéméther injectable .
+NB : la dose maximale est de 160 mg pour la dose de charge et de 80 mg pour la dose d’entretien.
+                                                   160
+
+
+      - Quinine
+La posologie pour la quinine est de 16 mg de Quinine base / kg de poids corporel en dose de charge
+puis 8 mg de Quinine base / kg de poids corporel en dose d’entretien toutes les 8 heures chez l’adulte
+et toutes les 12 heures chez l’Enfant.
+Si la durée de la perfusion dépasse 48 heures, réduire la dose d’entretien à 4mg/kg de
+quinine base jusqu’à possibilité de la voie orale.
+N.B. :
+
+•   Il faut toujours rechercher et traiter les complications (hypoglycémie, anémie grave, convulsions,
+    oligurie, etc.).
+
+•   Ne pas dépasser sept (7) jours de traitement avec la quinine injectable
+
+
+Précautions d’emploi
+l’Artésunate injectable:
+         ● Ne pas utiliser chez la femme enceinte au premier trimestre de la grossesse ;
+
+         ● Pour la présentation en poudre pour solution injectable, bien s’assurer que le produit est
+             totalement dissout et administrer sans délai après reconstitution.
+         ● Jeter la préparation si elle apparait trouble ou avec un précipité.
+
+
+
+l’artéméther injectable:
+     ● ne pas utiliser chez la femme enceinte au premier trimestre de la grossesse ;
+
+    ● utiliser une seringue de 1 ml pour administrer la dose correcte chez l’Enfant vu les faibles
+         volumes correspondant à cette tranche d’âge.
+la quinine
+     ● Il faut toujours tenir compte de la teneur en quinine base dans les différentes présentations de
+         sels de quinine;
+
+    ● il faut également avoir à l’esprit que la stabilité de la molécule de quinine en perfusion est
+         compromise au-delà de quatre (04) heures. Chaque dose de quinine doit donc être passée en
+         quatre (04) heures ;
+
+    ● ne pas dépasser 960 mg de quinine base en dose de charge et 480 mg pour les doses
+         d’entretien ;
+
+    ● dès que la voie orale est possible après les 48 heures de traitement avec la quinine injectable,
+         compléter le traitement avec la quinine comprimé à la posologie de 8 mg /kg toutes les 8 heures
+         (sans dépasser 480 mg par prise) pour compléter le traitement à sept (07 jours), ou avec des
+         ACT pendant 3 jours (cf. protocole de traitement du paludisme simple) ;
+
+    ● si le malade a pris de la quinine dans les 24 heures ou de la méfloquine au cours des 7 jours
+         précédents, ne pas faire de dose de charge. Administrer directement la dose d’entretien à 8
+                                                   161
+
+
+       mg/kg de quinine base en perfusion dans du soluté glucosé à 5% et 10% chez l'Enfant, à passer
+       en quatre (4) heures ;
+
+    ● si la durée de la perfusion dépasse 48 heures, réduire la dose d’entretien à 4 mg/kg de quinine
+       base ;
+
+    ● utiliser la formule suivante pour calculer le débit (volume à perfuser par unité de temps) en
+       fonction de la quantité de soluté à perfuser :
+
+                o       Débit (D) = Q / (3 x H) o D = nombre de gouttes/mn
+                o Q = quantité de soluté à perfuser (en ml) o H = durée
+                prévue (en heure)
+
+                o       Exemple : perfuser 500 ml de SGI en 4 heures o D
+                =500 / 3 x 4 = 500 / 12 = 42 gouttes de SGI par minute.
+    ● l’administration de la quinine en IM est fortement déconseillée à cause des multiples risques
+       (atteinte nerveuse, douleur, abcès, contaminations diverses, etc.).
+Cependant si malgré vos efforts la voie veineuse n’est pas accessible
+
+
+    ● administrer le traitement en IM à la dose de 8 mg /kg toutes les 12 heures chez l’Enfant et
+       toutes les 8 heures chez l’adulte en prenant les mesures suivantes: diluer la dose de quinine à
+       administrer dans du sérum salé isotonique (SSI) à la concentration de 60 % (60 mg/ml),
+       administrer la moitié de la dose dans la face antéro-externe d’une cuisse, et l’autre moitié dans
+       la face antéro-externe de la seconde cuisse. Pour la voie IM, il n’y a pas de dose de charge
+
+    ● alimenter le malade par une sonde naso-gastrique pour prévenir l’hypoglycémie.
+
+    ● aux doses normales, la quinine est habituellement bien supportée par les patients. Cependant,
+       la marge entre la concentration plasmatique thérapeutique (8 à 15 mg/l) et la concentration
+       plasmatique pouvant donner lieu à des effets secondaires (à partir de 20 mg/l) étant faible, il
+       est indispensable de respecter scrupuleusement les conditions d’utilisation de la quinine.
+
+    ● en cas de surdosage, les symptômes et signes suivants peuvent apparaître : acouphènes,
+       hypoacousie, voire surdité, amblyopie, nausées, douleurs abdominales, céphalées, vertiges,
+       fièvre, urticaires, bronchospasme, hémolyse, thrombopénie, agranulocytose, hypoglycémie
+       parfois sévère, complications cardiaques, etc. Selon la gravité des signes, prendre les mesures
+       adéquates : diminuer les doses, arrêter le traitement, réanimer le malade ou référer le malade.
+
+    ● les doses doivent être répétées toutes les 8 heures chez l’adulte et toutes les 12 heures chez
+       l’Enfant car la demie vie de la molécule est de huit (8) heures en moyenne (entre 5 et 10 h)
+       quel que soit l’excipient et quelle que soit la formule ;
+
+    ● en aucun cas une seule injection ou une seule prise de quinine par 24 heures ne doit être
+       prescrite pour un traitement de paludisme ;
+                                                  162
+
+
+    ● la quinine est tout à fait utilisable chez la femme enceinte : elle n’a pas d’action sur le
+       déclenchement du travail notamment. Mais l’hypoglycémie induite par la quinine est
+       particulièrement à craindre chez la femme enceinte comme chez l’Enfant.
+
+Les mesures suivantes doivent être respectées lors de la prise en charge du paludisme grave :
+
+   1) mettre en route une perfusion intraveineuse ;
+
+   2) en cas de convulsions, arrêter d’abord la crise convulsive par une administration de diazépam.
+       Chez l’Enfant, administrer 0,5 mg/kg de diazépam dilué dans 2ml de sérum physiologique en
+       intra-rectal. En cas de convulsions répétées, administrer une seconde dose de diazépam puis
+       du Phénobarbital à raison de     5-10mg/kg/24heures en IM en une dose ; Puis rechercher et
+       traiter éventuellement une cause décelable (hypoglycémie, hyperthermie etc.) ;
+
+   3) Corriger l’hypoglycémie au cas où elle existe :
+
+            - Soluté glucosé hypertonique à 30% par voie IVD en 10 à 15 mn : chez l’Enfant comme
+            chez l’adulte : 1 ml/kg de poids corporel ;
+
+            - A défaut du glucosé à 30%, utiliser = un soluté glucosé hypertonique à 10 % par voie
+            IVD, en 20 à 30 mn chez l’Enfant comme chez l’adulte : 5ml/kg de poids corporel ;
+
+            -   Contrôler la glycémie au bout de 30 mn si possible ;
+
+            - Continuer avec une perfusion de dextrose ou de glucose à 5 % pour maintenir la
+            glycémie.
+
+   4) Evaluer la quantité de soluté glucosé isotonique (10 ml/kg de sérum glucosé à 5% ou du
+       dextrose à 5%, ou tout autre soluté équivalent disponible) nécessaire sur la base du poids
+       corporel et placer le volume à passer au cours des 4 premières heures en cas d’utilisation de
+       la quinine. Attention aux perfusions à dose excessive ou à débit incontrôlé, qui peuvent
+       favoriser la survenue d’un œdème aigu du poumon.
+
+   5) Ajouter dans le soluté glucosé isotonique la quinine, à la dose correcte calculée selon le poids
+       du malade.
+
+   6) Faire baisser éventuellement la température : paracétamol ou acide acétyl salicylique par voie
+       orale, veineuse ou rectale, enveloppement humide ou bain tiède.
+   7) Apprécier la nécessité d’une transfusion sanguine (taux d’hémoglobine<5g/dl ou la présence
+       de signes d’intolérance tels que dyspnée, tachycardie, troubles de la conscience…).
+
+   8) Dans tous les cas, la corticothérapie est déconseillée dans le traitement du paludisme grave.
+
+   9) La surveillance du malade doit être très étroite : débit d’écoulement de la perfusion, état de
+       conscience, constantes, diurèse, etc.
+                                                      163
+
+
+    10) Entre deux cures de quinine, maintenir la voie veineuse en plaçant un soluté glucosé
+         isotonique. Adjoindre des électrolytes au traitement (NaCl, KCl, Ca).
+
+    11) Utiliser le score de Glasgow (chez les 3 ans et plus) ou de Blantyre (chez les moins de 3 ans)
+         pour la surveillance de l’état de conscience
+
+    ➢ NB : Echec thérapeutique
+L’échec thérapeutique est l'impossibilité d'avoir la réponse thérapeutique souhaitée après
+l'administration d'un traitement antipaludique pour un paludisme confirmé biologiquement. On pourrait
+envisager un échec thérapeutique si la fièvre ou les autres signes persistent plus de trois jours après
+un traitement adéquat avec une posologie correcte.
+Un patient dont l'état se dégrade malgré un traitement antipaludique correct doit être réévalué et son
+traitement ajusté.
+
+Traitement préventif intermittent (TPI) du paludisme pendant la grossesse
+La détermination de l'âge gestationnel par un examen clinique, en particulier au début de la grossesse,
+peut être difficile.
+Le TPI débute le plus tôt possible au deuxième trimestre de la grossesse (à partir de 16 semaines
+d’aménorrhée).
+
+
+Selon le niveau de soins et la disponibilité du plateau technique, l’agent de santé, pour administrer la
+première dose de SP se basera sur :
+
+                  -      L’échographie ;
+
+                  -      La date des dernières règles (16ème semaine d’aménorrhée) ;
+
+                  -      La hauteur utérine (18 cm) ou ;
+
+                  -      Le Mouvements actifs du fœtus (MAF) .
+
+Le médicament recommandé pour le TPI chez la femme enceinte est la sulfadoxine 500mg-
+pyriméthamine 25 mg (SP).
+    ● Le traitement préventif intermittent au cours de la grossesse (TPIg) avec la SP est recommandé
+         pour toutes les femmes enceintes lors de chaque consultation prénatale programmée jusqu'au
+         moment de l'accouchement, à condition que les doses soient administrées à au moins un mois
+         d'intervalle.
+                   -        La dernière dose de SP peut être administrée jusqu'à l'accouchement sans que
+                   cela ne pose un problème de sécurité ;
+                   -        Avec le nouveau calendrier SPN, il est possible d’administrer 6 doses de SP
+                   pendant la grossesse ;
+                   -        Il est recommandé toutefois d'administrer au moins 3 doses de SP durant la
+                   grossesse ;
+                   -        La prise de la SP doit être supervisée au niveau de la formation sanitaire ;
+
+                   -        En plus du TPI, il est fortement recommandé aux femmes enceintes de dormir
+                   sous MILDA toutes les nuits, tous les jours et toute l’année.
+                                                  164
+
+
+N.B. : La SP peut être prise même à jeun.
+
+
+
+Contre-indications de la SP chez la femme enceinte
+La SP est contre indiquée :
+       -       au premier trimestre de la grossesse;
+
+       -       en cas de prise de SP ou autre sulfamide dans les 4 semaines précédentes ;
+
+       -       en cas allergie aux sulfamides ;
+
+       -       chez les femmes sous prophylaxie au cotrimoxazole.
+                                                   165
+
+
+
+                                         II. PNEUMONIE
+SECTION 1. DEFINITION DE CAS RECOMMANDEE DE PNEUMONIE
+
+Cas suspect :
+Définition du cas clinique de pneumonie :
+Tout enfant de moins de 5 ans qui tousse et qui a une respiration rapide ou des difficultés respiratoires.
+Définition du cas clinique de pneumonie grave :
+Toux ou des difficultés à respirer et avec signe général de danger, un tirage sous costal ou stridor au
+repos, incapacité à boire, vomissements persistants, convulsions, léthargie ou perte de connaissance.
+
+Cas confirmé :
+La confirmation d’une pneumonie par radiographie ou en laboratoire n’est pas toujours possible dans la
+plupart des districts sanitaires.
+
+
+SECTION 2. PROTOCOLE DE TRAITEMENT DES CAS DE PNEUMONIE
+
+2.1 Pour les pneumonie grave :
+Donner la première dose d’antibactérien approprié en intramusculaire (Ampicilline + Gentamicine )
+avant l’évacuation.
+Tableau 9: posologie de l’ampicilline et gentamicine selon l’âge ou le poids
+
+
+
+ âge ou poids                       Ampicilline amp.500mg / 5 ml        Gentamicine       ampoule
+                                    Dose 100mg / kg /j                  80mg/2ml ou 10mg/1ml
+                                    Donner toutes les 12 heures
+                                                                        Dose : 3 mg/ kg/jour
+                                                                        Donner toutes les 12 heures
+ 20 - <50 kg (>6-12 ans)            500mg                               80 mg
+ Adulte< 60kg                       1g                                  160 mg
+
+
+2.2 Pour la pneumonie simple :
+Tableau 9 : posologie de l’ampicilline injectable et la Gentamicine injectable selon le poids et
+l’âge
+Donner un antibactérien approprié par voie orale :
+
+Chez l’adulte
+
+Cotrimoxazole.
+
+Adulte : 800 mg + 160 mg deux fois par jour ( soit deux comprimés deux fois par jour) pendant 8 jours,
+OU
+En seconde intention : Amoxicilline Adulte : 1g trois fois par jour (toutes les 8 heures) pendant 8 jours
+
+Enfant de 6 à 12 ans :
+Antibactérien voie orale : Amoxicilline + acide clavulanique comprimé 500 mg (50 mg/kg/j) : 500 mg
+x 2 à 3 fois/ j pendant 8j OU
+                                                  166
+
+
+Amoxicilline comprimé 250 mg dispersible ou gélules 500 mg (50 mg/kg/j) : 500 mg x 2 à 3 fois/ j
+Si non amélioré au bout de 3 jours, REFERER
+500mg trois fois par jour (toutes les 8 heures) pendant 8jours
+Traiter la fièvre avec un antipyrétique : Paracétamol
+Chez les adultes, le paracétamol est à administrer toutes les 4 heures à 6 heures à la dose de 500 mg
+à 1 000 mg par prise (soit un à deux comprimés par prise), avec une dose maximale de 4 000 mg par
+jour dans le cas général.
+
+Chez les enfants, 10 mg/kg à 15 mg/kg par prise avec une posologie maximale recommandée de
+60 mg/kg par jour.
+                                                      167
+
+
+
+                                           III. ROUGEOLE
+
+              SECTION 1. DEFINITION DE CAS RECOMMANDEE DE ROUGEOLE
+Cas suspect :
+Toute personne qui présente une Fièvre et une Eruption maculo-papuleuse généralisée
+Ou
+Toute personne chez laquelle le praticien suspecte la rougeole ou la rubéole
+Cas confirmé :Cas présumé confirmé par le laboratoire (sérologie positive des IgM) ou ayant un lien
+épidémiologique avec des cas confirmés ou provenant d’une zone épidémique.
+        SECTION 2. PROTOCOLE DE TRAITEMENT DES CAS DE ROUGEOLE
+Prendre en charge et traiter les cas par réhydratation orale :
+
+Administrer de la Vitamine A : 3 doses à J1, J2 et J8.
+
+Enfant de 6 mois à 1 an : 100 000 UI ( soit une capsule de 100 000 UI ou la moitié d’une capsule 2
+00 000 UI )
+
+Enfant de plus d’1 an : 200 000 UI
+
+Antibactériens pour prévenir la surinfection bactérienne : Tétracycline pommade ophtalmique1% deux
+fois par jour dans les deux yeux pendant 5 jours.
+
+En cas d’infection respiratoire :
+
+Ampicilline injectable 100 mg/kg toutes les 12 heures pendant 8jours
+
+
+
+OU Amoxicilline voie orale : Enfant 125 mg/5kgx3 fois/jr pendant 8 jours.
+
+                                    Adulte 1gx3fois/jr pendant 8 jours
+
+Prendre des précautions d’isolement, et éviction scolaire de 15 jours, si possible.
+
+
+
+Investiguer le cas pour en déterminer les causes.
+                                                  168
+
+
+
+                       IV. MENINGITES BACTERIENNES
+         SECTION 1. DEFINITION DE CAS RECOMMANDEE DE MENINGITES
+                               BACTERIENNES
+
+Cas suspect de méningite
+
+Tout Enfant de plus de 30 mois ou toute personne adulte avec apparition brutale d’une fièvre ≥ 38,5°C
+avec un des signes suivants : raideur de la nuque, trouble neurologique ou tout autre signe méningé.
+
+Tout nourrisson avec apparition brutale d’une fièvre ≥ 38,5°C avec un des signes suivants : raideur de
+la nuque ou nuque molle, bombement de la fontanelle, plafonnement du regard, convulsion ou tout autre
+signe méningé.
+
+Cas probable de méningite
+
+Tout cas suspect chez qui la ponction lombaire (PL) ramène un liquide céphalorachidien (LCR) d’aspect
+macroscopique louche, trouble, purulent ou xanthochromique (jaune citrin) ou avec la présence de
+diplocoques à Gram négatif, diplocoques à Gram positif, bacilles à Gram négatif à l’examen
+microscopique, ou si le compte de leucocytes est supérieur à 10 cellules/mm3.
+
+Cas confirmé de méningite
+
+Tout cas suspect ou probable chez qui l’agent causal (N. meningitidis, Streptococcus pneumoniae,
+Haemophilus influenzae b…) a été mis en évidence à partir du LCR par culture ou par polymerase chain
+reaction (PCR) ou par la détection de l’antigène spécifique dans le LCR (latex, bandelettes réactives).
+                                               169
+
+
+       SECTION 2. PROTOCOLE DE TRAITEMENT DES CAS DE MENINGITES
+                            BACTERIENNES
+
+
+. Au niveau des formations sanitaires
+1. Connaitre et comprendre les définitions de cas standard ;
+2. Détecter et notifier tous les cas au niveau supérieur ;
+3. Remplir correctement la fiche individuelle de notification et la liste descriptive des cas ;
+4. Faire des prélèvements pour tout cas suspects et envoyer les échantillons de LCR au
+    laboratoire pour confirmation. S’assurer que chaque échantillon est correctement étiqueté
+    et qu’une fiche individuelle de notification des cas accompagne chaque échantillon ;
+5. Après avoir pratiqué une ponction lombaire, administrer aussitôt que possible des
+    antibiotiques appropriés selon le protocole national sans attendre les résultats de
+    laboratoire chez tout cas suspect de méningite ;
+6. Acheminer les échantillons dans des milieux de transport adéquats (tube sec, trans isolate,
+    cryotube) ;
+7. Utiliser des tests de diagnostic rapide pour donner une première indication de(s) l' agent(s)
+    pathogène(s) et du sérogroupe en cause ;
+8. Analyser tous les échantillons pour identifier les agents pathogènes bactériens ;
+9. Poursuivre l’analyse des données et leur représentation graphique et cartographique.
+
+
+
+NB :. La mise en évidence d’une prédominance de Neisseria meningitidis parmi les agents
+étiologiques permet de suspecter une flambée épidémique.
+                                                        170
+
+
+  Traitement des cas
+  Tableau 10: Traitement des cas de méningite en « SITUATION D’EPIDEMIE »
+
+
+
+Groupe d’âge                     Traitement
+                                 Céfotaxime
+                                     • pour le nouveau-né de moins d’une semaine : 200mg/kg/jour en IV
+                                         répartis en 2 administrations pendant 10 jours
+Chez les Enfants de 0–2              • pour le bébé de plus d’une semaine : 300mg/kg/jour en IV répartis en
+mois                                     3 administrations pendant 10 jours
+                                 En l’absence de la Céfotaxime utiliser la ceftriaxone.
+                                 Ceftriaxone
+                                     •    100 mg/kg/jour une fois par jour pendant 7 jours en IV ou IM.
+Chez les Enfants de plus         Ceftriaxone 100 mg/kg/jour une fois par jour sans dépasser 2g IM ou IV
+de 2 mois                        pendant 5 jours
+
+Chez les Enfants de plus         Ceftriaxone 2 g/ jour une fois par jour IM ou
+de 14 ans et les adultes         IV pendant 5 jours
+
+  Evacuer à un niveau de soins supérieur en l’absence d’amélioration dans les 48 heures ou en présence
+  d’un coma ou de convulsions.
+
+  Pour les nouveau-nés, évacuer après l’administration de la première dose en milieu hospitalier.
+
+      -    Le traitement en dose unique de la ceftriaxone n’est plus recommandé.
+      -    En cas de traitement avec la ceftriaxone, l’administration de soluté contenant du calcium
+           (Gluconate de Ca, Ringer lactate, …) utilisé comme excipient dans certaines préparations
+           pharmaceutiques est à l’origine d’interaction médicamenteuse parfois mortelle surtout chez les
+           nouveaux nés.
+  En dehors de l’épidémie, la durée du traitement est de 7-10 jours pour tous les âges avec la ceftriaxone ou
+  la céfotaxime et selon les mêmes posologies qu’au cours d’épidémie
+  Traitement adjuvant
+  Il fait appel à :
+
+      -    une corticothérapie de 3 jours : à débuter immédiatement avant ou de façon concomitante à la
+           première injection d’antibiotique.
+                o     Chez l’adulte : dexaméthasone 10 mg toutes les 6 heures ou hydrocortisone 500mg/J en
+                      une seule injection ;
+                o     Chez l’Enfant : dexaméthasone 0,5 à 1mg/kg/j en deux injections ou hydrocortisone 10
+                      mg/kg/j en deux injections.
+      -    une hydratation et une correction des troubles hydro électrolytiques ;
+      -    un remplissage vasculaire si nécessaire ;
+      -    un traitement antipyrétique en cas de fièvre;
+  un traitement des crises convulsives et une prévention des récidives .
+                                                   171
+
+
+
+                   V. DIARRHEE AVEC DESHYDRATATION
+             SECTION 1. DEFINITION DE CAS RECOMMANDEE DIARRHEE
+Cas suspect :
+Emission d’au moins 3 selles molles ou liquides au cours des dernières 24 heures, avec ou sans
+déshydratation.
+Déshydratation légère – au moins 2 des signes suivants : agitation, irritabilité, yeux Enfoncés/creux, soif
+intense, peau qui se détend lentement après pincement, OU
+Déshydratation grave – au moins 2 des signes suivants : léthargie ou perte de connaissance, yeux
+Enfoncés/creux, incapacité ou difficulté à boire, peau qui se détend très lentement après pincement.
+Cas confirmé :
+Cas suspect confirmé par coproculture pour la mise en évidence des agents entéropathogènes ou par
+recherche d’antigène viraux.
+Remarque : la confirmation par le laboratoire de l’agent pathogène spécifique à l’origine de l’épidémie
+n’est pas systématiquement recommandée à des fins de surveillance.
+
+          SECTION 2. PROTOCOLE DE TRAITEMENT DES CAS DE DIARRHEE
+2.1 Recherche des signes de déshydratation
+Tableau 11: résumé de la recherche des signes de déshydratation
+
+
+Action      Critères      A                  B                             C
+
+1.       Etat             Normal             Agité et irritable            Léthargie ou inconscience
+Observer général
+
+            Yeux          Normaux            Enfoncés                      Enfoncés
+
+            Soif          Boit               Assoiffé, boit avec avidité   Boit difficilement, incapable de
+                          normalement,                                     boire
+                          pas soif
+
+2. Palper   Pli cutané    S’efface           S’efface lentement            S’efface très lentement (plus
+                          rapidement                                       de 2 secondes)
+
+3.                                           Au moins 2 des signes de Au moins 2 des signes de
+Conclure                                     déshydratation           déshydratation sévère
+
+4. Agir                   Plan A             Plan B                        Plan C
+                                                  172
+
+
+
+
+  2.2-      Pour les Plans de Réhydratation
+
+
+➢Plan A: Traiter la diarrhée à domicile
+  Apprendre à la mère les 4 règles du traitement à domicile:
+  Donner davantage de liquides, continuer l’alimentation, donner du sulfate de zinc et quand
+  revenir
+  1. DONNER DAVANTAGE DE LIQUIDES (autant que l’Enfant veut bien prendre)
+         EXPLIQUER À LA MÈRE:
+          - Qu’il faut allaiter plus fréquemment au sein et prolonger la durée de la tétée..
+          - Que si l’Enfant est nourri uniquement au sein, il faut lui donner une solution de SRO
+            ou de l’eau propre en plus du lait maternel.
+          - Que si l’Enfant n’est pas nourri uniquement au sein, il faut lui donner une ou plusieurs
+            fois: solution de SRO, aliments liquides (potage, eau de riz, yaourt liquide), ou eau
+            propre.
+          Il est crucial de donner une solution de SRO à domicile si:
+          - l’Enfant était sous traitement par plan B ou C pendant la visite.
+          - l’Enfant ne peut pas être ramené au dispensaire si la diarrhée s’aggrave.
+
+
+         APPRENDRE À LA MÈRE COMMENT MÉLANGER ET ADMINISTRER LA
+         SOLUTION SRO. DONNER À LA MÈRE 2 PAQUETS DE SOLUTION SRO À
+         UTILISER À DOMICILE.
+         MONTRER À LA MÈRE QUELLE QUANTITE DE LIQUIDE ELLE DOIT DONNER EN
+         PLUS DE LA CONSOMMATION NORMALE:
+             Jusqu’à 2 ans    50 à 100 ml après chaque selle liquide
+             2 ans et plus    100 à 200 ml après chaque selle liquide
+         Expliquer à la mère qu’il faut:
+             -   Donner fréquemment à boire dans une tasse, par petites gorgées.
+             -   Si l’Enfant vomit, attendre 10 minutes. Puis continuer, mais plus lentement.
+             -   Continuer à donner davantage de liquides jusqu’à l’arrêt de la diarrhée.
+
+
+  2. CONTINUER L’ALIMENTATION
+
+
+  3. DONNER DU SULFATE DE ZINC
+
+
+  4. EXPLIQUER QUAND REVENIR
+                                            173
+
+
+
+Plan B: Traiter les signes évidents de déshydratation avec une solution de SRO
+
+   Administrer, au dispensaire et sur une période de 4 heures, la quantité de solution de SRO
+   recommandée
+
+        DÉTERMINER LA QUANTITÉ DE SRO À ADMINISTRER PENDANT LES 4 PREMIÈRES
+   HEURES.
+   * N’utiliser l’âge de l’Enfant que si son poids n’est pas connu. La quantité approximative de
+   solution de SRO nécessaire (en ml) peut aussi être calculée en multipliant le poids de l’Enfant
+   (en kg) par 75.
+
+Tableau 12 estimation de la quantité de SRO selon l’âge et le poids
+
+
+        ÂGE*           Jusqu’à 4 mois      de 4 mois à 12    de 12 mois à 2 ans de 2 ans à 5 ans
+                                                mois
+        POIDS               < 6 kg           6 - < 10 kg         10 - < 12 kg         12 - 19 kg
+        En ml             200 - 400           400 - 700           700 - 900          900 - 1400
+
+
+    • Si l’Enfant veut davantage de solution de SRO, lui en donner plus.
+    Pour les Enfants de moins de 6 mois qui ne sont pas nourris au sein, donner également 100 -
+      200 ml d’eau propre pendant cette période.
+
+MONTRER À LA MÈRE COMMENT DONNER LA SOLUTION DE SRO.
+     - Faire boire fréquemment l’Enfant à la tasse, par petites gorgées.
+     - Si l’Enfant vomit, attendre 10 minutes. Puis continuer, mais plus lentement.
+     - Continuer à allaiter au sein quand l’Enfant réclame.
+
+   APRÈS 4 HEURES :
+    - Réexaminer l’Enfant et classer la déshydratation.
+    - Choisir le plan approprié pour continuer le traitement.
+    - Commencer à alimenter l’Enfant au dispensaire.
+
+   SI LA MÈRE DOIT PARTIR AVANT LA FIN DU TRAITEMENT :
+    - Lui montrer comment préparer la solution de SRO à domicile.
+    - Lui montrer combien de SRO elle doit donner pour finir le traitement de 4 heures à domicile.
+    - Lui donner assez de paquets de SRO pour terminer le traitement de réhydratation. Lui donner
+        également 2 paquets, comme recommandé dans le Plan A.
+    - Expliquer les 4 règles du traitement à domicile :
+
+    1. DONNER DAVANTAGE DE LIQUIDES
+Voir Plan A pour les liquides recommandés
+
+
+    2. CONTINUER L’ALIMENTATION
+
+    3. DONNER DU SULFATE DE ZINC :
+1.Enfants de moins de 6 mois : 10 mg par jour pendant 14 jours
+2.Enfants de plus de 6 mois : 20 mg par jour pendant 14 jours.
+
+
+    4. EXPLIQUER QUAND REVENIR
+                                                            174
+
+
+          Plan C : Traiter rapidement la déshydratation sévère.
+      SUIVRE LES FLECHES. SI LA REPONSE EST « OUI » FAIRE CE QUI EST INDIQUE A DROITE. SI LA
+        REPONSE EST « NON » PASSER A LA QUESTION SUIVANTE :
+
+      COMMENCER
+                                          Commencer immédiatement la perfusion intraveineuse. Si l’Enfant est capable de boire, lui
+                                          donner une solution de SRO par voie orale pendant que la perfusion est mise en place. Donner
+                                          100 ml/kg de solution de Ringer au lactate (ou si elle n’est pas disponible, une solution salée
+                                          isotonique) comme suit
+
+                                          Tableau 13 :évaluation de la quantité de soluté à perfuser selon l’âge et la poids
+    Etes-vous en mesure de
+   placer immédiatement une
+  perfusion intraveineuse (IV) ?   OUI                   AGE                        Donner d’abord                  Puis donner
+                                                                                     30 ml/Kg en :                  70 ml/Kg en :
+                                                      Nourrissons
+                                                  (moins de 12 mois)                    1 heure*                       5 heures
+                                                        Enfants
+                                                   (12 mois à 5 ans)                  30 minutes*                    2 ½ heures
+             NON
+                                          * Renouveler une fois si le pouls est encore très faible ou imperceptible.
+                                          •    Réexaminer l’Enfant toutes les 1-2 heures. Si l’hydratation ne s’améliore pas, accélérer
+                                               la perfusion.
+                                          •    Donner également une solution de SRO (environ 5 ml/Kg/h) aussitôt que l’Enfant est
+                                               capable de boire (normalement après 3-4 heures pour les nourrissons ou 1-2 heures
+      Le traitement IV est –il                 pour les Enfants).
+  disponible dans les environs
+     (dans les 30 minutes) ?              • Réexaminer un nourrisson après 6 heures et un Enfant après 3 heures. Classer la
+                                               déshydratation. Ensuite, choisir le plan approprié ( A, B ou C) pour continuer le
+                                   OUI
+                                           •    Transférer d’URGENCE à l’hôpital pour perfusion intraveineuse.
+                                           •    Si l’Enfant est capable de boire, donner à la mère une solution de SRO et lui
+             NON                                apprendre à donner fréquemment des gorgées à l’Enfant en cours de route.
+
+
+
+ Etes-vous formés pour utiliser
+ une sonde nasogastrique                   •    Commencer la réhydratation à l’aide d’une sonde (ou par voie orale) et la solution de
+ pour la réhydratation ?                        SRO : administrer 20 ml/kg pendant 6 heures (total : 120 ml/kg).
+                                           •    Réexaminer l’Enfant toutes les 1-2 heures.
+                                           •    En cas de vomissements répétés ou de distension abdominale. Administrer le liquide
+                                                plus lentement.
+            NON                            •    Si l’hydratation n’améliore pas l’état de l’Enfant après 3 heures, transférer l’Enfant
+                                    OUI
+                                                pour perfusion intraveineuse
+                                           •    Après 6 heures, réévaluer l’Enfant, classer la déshydratation. Ensuite, choisir le plan
+   Est-ce que l’Enfant est                      approprié (A, B, ou C) pour continuer le traitement.
+   capable de boire ?
+
+
+             NON
+
+                                           REMARQUE :
+   Transférer d’URGENCE
+   à l’hôpital pour perfusion              • Si possible : garder l’Enfant en observation pendant 6 heures au moins après la
+   intraveineuse ou                             réhydratation pour s’assurer que la mère peut maintenir l’hydratation en administrant à
+   traitement par sonde                         l’Enfant la solution de SRO par voie orale.
+   nasogastrique
+
+
+
+
+NB: Pour un Enfant qui passe du plan C au plan A n’administrer que le SRO pas d’autres liquides mais des
+aliments solides
+
+
+
+        VACCINER TOUT ENFANT MALADE, ET LUI DONNER DE LA VITAMINE A SI NECESSAIRE
+                                                    175
+
+
+
+
+    2.3-    Conseils d’hygiène pour rompre la chaîne de transmission des
+            maladies diarrhéiques :
+
+    1. Lavage des mains avec de l’eau et du savon après avoir été à la selle, avant de préparer les
+        repas, de manger ou de faire manger les Enfants.
+
+    2. Elimination des excréments : Chaque famille doit avoir accès aux latrines que tous les membres
+        utilisent et maintiennent propres, les latrines doivent être distant d’au moins 15 m de la source
+        d’eau. Contrairement à certaines croyances, les excrétas des jeunes Enfants peuvent être
+        source importante de contamination, d’où la nécessité d’éduquer les mères à ce sujet.
+
+    3. Elimination des ordures ménagères qui doivent être collectées dans des récipients fermés et
+        transportées au dépotoir public loin des habitations et des sources d’eau.
+
+    4. Elimination des vecteurs : mouches et cafards doivent être éliminés par désinsectisation.
+        Protéger également les aliments par un couvercle.
+
+    5. Encouragement de l’allaitement maternel exclusif chez les Enfants de moins de 6 mois et la
+        poursuite de l’allaitement jusqu’à l’âge de 24 mois.
+
+    6. Approvisionnement en eau saine : se procurer de l’eau traitée ou assainir l’eau
+
+    7. Stockage de l’eau : protéger l’eau stockée de toute contamination par des insectes en couvant
+        toujours les récipients et en évitant un contact avec mains lors du prélèvement.
+
+    8. Conseils diététiques
+La diarrhée liquide aiguë est cause de déshydratation et contribue à la malnutrition. La raison de la mort
+d’un Enfant souffrant de diarrhée est souvent la déshydratation.Traiter l’Enfant avec une solution de SRO.
+En l’absence de cette solution, on peut également conseiller la préparation domestique d’une solution de
+réhydratation par voie orale selon la formule suivante :
+    -   1 litre d’eau potable
+    -   8 morceaux de sucre
+    -   1 cuillère à café rase de sel
+        (On peut ajouter du jus de citron ou de fruit)
+
+Conseiller à la mère d’augmenter la consommation de liquides pendant toute la maladie :
+Par exemple, donner du potage, de l’eau de riz, des yaourts liquides, du lait caillé ou de l’eau propre et
+ de l’eau de tô délayé.
+Continuer parallèlement l’alimentation qui doit être enrichie
+
+Continuer l’allaitement au sein
+
+Alimenter l’Enfant toutes les 3-4 heures (6 fois/jour)
+                                                    176
+
+
+Revoir l’Enfant pour une visite de suivi après 2 jours. Si la diarrhée ne s’est pas arrêtée (l’Enfant a
+encore 3 selles liquides ou plus par jour : donner le traitement nécessaire, puis transférer l’Enfant à
+l’hôpital
+
+
+
+2-4         Traiter la diarrhée persistante
+
+ 2.4.1 diarrhée persistante chez l’enfant
+Si la diarrhée persiste depuis 14 jours ou plus. Rechercher les signes de déshydratation :
+• Déshydratation présente. DIARRHÉE PERSISTANTE SÉVÈRE : Traiter la déshydratation et
+REFERER l’Enfant
+• Pas de déshydratation. DIARRHÉE PERSISTANTE : Donner des recommandations pour
+l’alimentation de l’Enfant :
+Si l’Enfant est encore allaité au sein, allaiter plus fréquemment et plus longtemps, jour et nuit.
+Si l’Enfant consomme un autre lait:
+- remplacer ce lait en augmentant l’allaitement au sein OU
+- remplacer ce lait par des produits laitiers fermentés, tels que le yaourt OU
+- remplacer la moitié de ce lait par des aliments semi-solides très nutritifs.
+Donner d’avantage de liquide (SRO), eau, eau de riz, bouillie liquide, pain de singe délayé
+Donner un repas supplémentaire durant 1 semaine après l’arrêt de la diarrhée
+Pour les autres aliments, suivre les recommandations pour l’alimentation de L’Enfant selon son âge.
+Donner des multi vitamines plus aliments riches en sels minéraux pendant 14 jours
+Donner des préparations traditionnelles (bouillies, jus de pain de singe, soupe de carotte, farine de néré
+délayé, bouillie de riz)
+Donner des multivitamines et des sels minéraux
+Donner du sulfate de zinc pendant 14 jours
+Expliquer quand revenir immédiatement
+Revoir dans 5 jours. Après 5 jours :
+
+
+Si la diarrhée ne s’est pas arrêtée (l’Enfant a encore 3 selles liquides ou plus par jour), refaire une
+évaluation complète de l’Enfant. Donner le traitement nécessaire. Puis transférer l’Enfant à l’hôpital pour
+diarrhée persistante.
+Si la diarrhée s'est arrêtée (l’Enfant a moins de 3 selles liquides par jour), dire à la mère de suivre
+les conseils d’alimentation appropriés pour l’âge de l’Enfant.
+Dire à la mère de continuer à donner les multivitamines, les sels minéraux et le sulfate de zinc pour la
+diarrhée persistante.
+DIARRHEE PERSISTANTE CHEZ L’ADULTE
+1. Augmenter la prise de liquides pour éviter la déshydratation. (plan A, B ou C)
+2. Si absence de sang dans les selles et de fièvre :
+• Traitement antibactérien empirique :
+                                                      177
+
+
+Cotrimoxazole ET Métronidazole :20mg/kg deux fois par jour. Consultation de contrôle après 7 jours.
+-   Si la réponse aux antibactériens est bonne, poursuivre sur 2 semaines la totalité du traitement.
+-   Si absence de réponse : Traiter avec : Albendazole OU Mébendazole.
+-   Si la diarrhée ne disparaît pas au bout de 2 semaines ou après le second traitement, Conseiller le
+test de dépistage du VIH.
+Traitement antidiarrhéique si le patient est âgé.
+Lopéramide 4mg, dose unique, puis 2mg après chaque selle liquide jusqu’à 16 mg/jour maximum.
+
+
+•        Conseils pour les soins spéciaux à apporter à la zone rectale :
+o     En cas de douleur ano-rectale locale appliquer de la vaseline ou une pommade anesthésiante
+locale (gel de xylocaine)
+o     En cas d’incontinence :
+- Utiliser de la vaseline ou du beurre de karité pour protéger la peau péri anale
+- Nettoyer la région ano-rectale après les selles avec du papier hygiénique doux humidifié
+- Si nécessaire, nettoyer la région ano-rectale à l’eau et au savon
+- Faire un bain de siège avec de l’eau tiède salée, à renouveler deux fois par jour.
+•   Conseils sur la nature du régime alimentaire pour les patients atteints de diarrhée :
+-   La soupe de carottes aide à remplacer les vitamines et les sels minéraux. La soupe de carottes
+    contient de la pectine. Elle calme l’intestin et stimule l’appétit.
+-   Les tubercules (ignames, patates, manioc, taro…) et les céréales (riz, mais, mil) peuvent aider à
+    diminuer les diarrhées.
+-   Manger des bananes et des tomates (pour le potassium)
+-   Fractionner les repas au cours de la journée (5-6 petits repas plutôt que 3 gros)
+-    Ajouter de la noix de muscade aux aliments
+-   Éviter :
+-   Le café, le thé, l’alcool et les épices
+-   Les aliments crus, les aliments froids, les aliments riches en fibres, les aliments gras
+-   Le lait et le fromage (le yaourt est mieux toléré).
+•        Surveiller le poids (le patient peut lui-même suivre la modification de poids avec ses vêtements).
+•        Effectuer un suivi régulier.
+    Si le patient est sous TARV, et la diarrhée persistante apparaît, s’assurer qu’il est observant. Le
+    prendre en charge ou le référer l’échelon supérieur : Cela peut indiquer une toxicité du traitement
+    ou que le TARV n’est pas efficace. Envisager la Tuberculose (TB si fièvre ou perte de poids : cela
+    peut nécessiter une référence vers l’échelon supérieur
+                                                       178
+
+
+
+2-5 Diarrhée sanguinolente (Shigellose)
+
+2-5-1 Définition de cas recommandée de diarrhée sanguinolente
+(shigellose)
+
+Cas suspect :
+Toute personne souffrant de diarrhée fébrile (>37,5° C) avec présence de sang visible
+dans les selles
+Cas confirmé :
+Cas suspect avec coproculture positive pour Shigella dysenteriae type 1 (SD1).
+2-5-2 Protocole de traitement des cas de diarrhée sanguinolente
+
+
+    •    Evaluer le degré de déshydratation, et réhydrater selon le tableau
+Administrer pendant 5 jours un Antibactérien oral, en tenant compte du niveau de sensibilité locale. Il
+existe de nombreuses résistances.
+
+    •    Obtenir un échantillon de selles ou faire un prélèvement rectal pour confirmer l’épidémie de
+         dysenterie à Sd1.
+    •    Administrer un antibactérien par voie orale :
+Ciprofloxacine 10 à 20 mg / kg / jour en 2 prises pendant 5 jours.
+
+Si la réponse n’est pas favorable au bout des 5 jours associer
+Métronidazole : Enfant. > 1 an : 125 mg toutes les 8 heures / 5 jours. Enfant. > 5 ans 125 à 375mg x 3
+fois/j / 5 j. Ad. 500mg à 1g x 3 fois /j/5 j
+Tableau 14: posologie de la Ciprofloxacine et du Métronidazole selon l’ Age ou et le poids
+
+
+Age ou poids                             Ciprofloxacine                     Métronidazole
+                                         20 mg/kg x 2 fois par jour / 5 j   20 mg/kg x 2 fois par jour / 5 j
+
+< 6 kg (2 mois à 4 mois)                 62,5mg                             125mg
+6 à 9 kg (4 mois à 12 mois)              125mg                              200mg
+9 à 13 kg (12 mois à 30 mois)            250mg                              250mg
+13 à 18 kg (30 mois à 5 ans)             375mg                              375mg
+                                                   179
+
+
+
