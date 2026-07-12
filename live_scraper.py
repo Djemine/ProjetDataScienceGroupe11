@@ -56,14 +56,22 @@ def get_pharmacies_de_garde(query: str = "", max_results: int = 15) -> dict:
     ville = detect_city(query)
     url = URLS_PAR_VILLE.get(ville, URLS_PAR_VILLE["ouagadougou"])
 
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=8)
-        response.raise_for_status()
-    except requests.RequestException as e:
+    response = None
+    last_error = None
+    for attempt in range(2):  # 1 essai + 1 nouvel essai en cas de raté ponctuel
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=10)
+            response.raise_for_status()
+            break
+        except requests.RequestException as e:
+            last_error = e
+            response = None
+
+    if response is None:
         return {
             "success": False,
             "ville": ville,
-            "error": str(e),
+            "error": str(last_error),
             "pharmacies": [],
         }
 

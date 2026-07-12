@@ -64,7 +64,7 @@ CENTRE_KEYWORDS = FACILITY_KEYWORDS
 DB_DIR = "vectordb"
 COLLECTION_NAME = "sante_docs"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-GROQ_MODEL = "openai/gpt-oss-120b"
+GROQ_MODEL = "llama-3.3-70b-versatile"
 
 TOP_K = 8
 CENTRE_MERGE_CAP = 12          # nb de chunks gardés une fois le filtrage par ville appliqué
@@ -127,16 +127,18 @@ TOPIC_CENTRE = "centre"
 GREETING_PATTERN = _compile_keyword_pattern(GREETING_KEYWORDS)
 
 
-def _strip_greetings(query_norm: str) -> str:
-    """Attend une chaîne déjà normalisée (normalize_text). Retire les salutations avant la
-    résolution de sujet et la recherche vectorielle : sans ça, une question du type 'Salut,
-    comment tu vas ?? Quels sont les symptômes du palu ?' se découpe (via le split sur '?')
-    en une sous-question parasite ('comment tu vas') qui pollue le contexte récupéré avec des
-    résultats hors sujet. Le LLM reçoit toujours `query` en clair dans le prompt final, pour
-    répondre avec un ton naturel à la salutation."""
-    cleaned = GREETING_PATTERN.sub("", query_norm)
-    cleaned = re.sub(r"\s+", " ", cleaned).strip(" ?!.,")
-    return cleaned if cleaned else query_norm
+def _strip_greetings(text: str) -> str:
+        """Retire les salutations en travaillant sur le texte ORIGINAL (accents et casse
+        préservés), pour ne pas dégrader la qualité sémantique de la recherche vectorielle
+        ensuite. La détection des mots de salutation reste insensible à la casse/aux accents
+        via normalize_text() appliqué seulement pour la comparaison, pas pour le résultat."""
+        pattern = re.compile(
+            "|".join(re.escape(kw) for kw in sorted(GREETING_KEYWORDS, key=len, reverse=True)),
+            re.IGNORECASE,
+        )
+        cleaned = pattern.sub("", text)
+        cleaned = re.sub(r"\s+", " ", cleaned).strip(" ?!.,")
+        return cleaned if cleaned else text
 
 
 def _last_explicit_topic(history):
@@ -349,19 +351,28 @@ class RAGEngine:
 
     def generate_answer(self, query: str, history=None):
         retrieval_start = time.time()
-
-        # search_query : version normalisée ET débarrassée des salutations, utilisée pour
-        # TOUTE la résolution de sujet / recherche. `query` (original, avec la salutation)
-        # n'est réinjecté qu'au moment de construire le prompt final envoyé au LLM.
-        search_query = _strip_greetings(normalize_text(query))
+        search_query = _strip_greetings(query)
         topic = self._resolve_topic(search_query, history)
 
         if topic == TOPIC_PHARMACY:
-            scraping_query = self._build_pharmacy_query(search_query, history=history)
+            scraping_query = self._build_pharmacy_query(query, history=history)
             live_result = get_pharmacies_de_garde(scraping_query)
             context_text = format_for_llm(live_result)
             sources_meta = [{"source": "infossante.net (temps réel)", "score": 1.0}]
             retrieval_mode = "scraping_live"
+            query_norm = normalize_text(query)
+            if CENTRE_PATTERN.search(query_norm):
+                city = self._detect_city(query, history)
+                if city:
+                    target_file = CITY_SOURCE_FILES.get(city, PROVINCE_SOURCE_FILE)
+                    centre_chunks = self.retrieve(query, top_k=8, where={"source": target_file})
+                    if centre_chunks:
+                        centre_context = "\n\n---\n\n".join(
+                            f"[Source: {c['source']}]\n{c['text']}" for c in centre_chunks
+                        )
+                        context_text = context_text + "\n\n---\n\n" + centre_context
+                        sources_meta.append({"source": target_file, "score": centre_chunks[0]["score"]})
+                        retrieval_mode = "scraping_live+recherche_vectorielle"
         else:
             sub_questions = [q.strip() for q in search_query.split("?") if q.strip()]
 
