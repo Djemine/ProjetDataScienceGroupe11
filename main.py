@@ -11,8 +11,33 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional
-
+import hashlib
+import glob
 from rag_engine import RAGEngine
+
+
+
+def _compute_data_hash():
+    txt_files = sorted(glob.glob("data/*.txt"))
+    hasher = hashlib.sha256()
+    for filepath in txt_files:
+        with open(filepath, "rb") as f:
+            hasher.update(f.read())
+    return hasher.hexdigest()
+
+
+def _needs_ingestion():
+    if not os.path.isdir("vectordb") or not os.listdir("vectordb"):
+        return True
+
+    hash_file = "vectordb/.data_hash"
+    if not os.path.exists(hash_file):
+        return True
+
+    with open(hash_file) as f:
+        stored_hash = f.read().strip()
+
+    return stored_hash != _compute_data_hash()
 
 app = FastAPI(title="Agent d'Orientation Médicale & Prévention - API")
 
@@ -29,9 +54,16 @@ rag_engine: Optional[RAGEngine] = None
 @app.on_event("startup")
 def load_engine():
     global rag_engine
+    import subprocess
+
+    if _needs_ingestion():
+        print(" Base vide ou data/ modifié — ingestion en cours...")
+        subprocess.run(["python", "ingest.py"], check=True)
+    else:
+        print(" Base vectorielle déjà à jour, ingestion ignorée.")
+
     rag_engine = RAGEngine()
     print(" RAGEngine chargé et prêt.")
-
 
 class ChatMessage(BaseModel):
     role: str

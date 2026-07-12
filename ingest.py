@@ -10,6 +10,7 @@ import os
 import glob
 import chromadb
 from chromadb.utils import embedding_functions
+import hashlib
 
 DATA_DIR = "data"
 DB_DIR = "vectordb"
@@ -46,6 +47,15 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVE
         chunks.append(current)
 
     return chunks
+
+def compute_data_hash():
+    """Empreinte du contenu actuel de data/, pour savoir si une ré-ingestion est nécessaire."""
+    txt_files = sorted(glob.glob(os.path.join(DATA_DIR, "*.txt")))
+    hasher = hashlib.sha256()
+    for filepath in txt_files:
+        with open(filepath, "rb") as f:
+            hasher.update(f.read())
+    return hasher.hexdigest()
 
 
 def main():
@@ -95,6 +105,8 @@ def main():
 
     print(f"\n Ingestion terminée : {chunk_counter} chunks stockés dans la collection '{COLLECTION_NAME}'.")
     print(f" Base vectorielle sauvegardée dans le dossier '{DB_DIR}/'.")
+    with open(os.path.join(DB_DIR, ".data_hash"), "w") as f:
+        f.write(compute_data_hash())
 
 
 if __name__ == "__main__":

@@ -17,6 +17,13 @@ from live_scraper import get_pharmacies_de_garde, format_for_llm, VILLE_ALIASES
 load_dotenv()
 
 
+GREETING_KEYWORDS = [
+    "salut", "bonjour", "bonsoir", "coucou", "hello",
+    "comment tu vas", "comment allez vous",
+    "ca va",
+]
+
+
 def normalize_text(text: str) -> str:
     """Retire les accents et met en minuscule, pour comparer 'santé'/'sante', 'hôpital'/'hopital', etc."""
     nfkd = unicodedata.normalize("NFKD", text)
@@ -117,6 +124,20 @@ GARDE_PATTERN = _compile_keyword_pattern(["garde"])
 TOPIC_PHARMACY = "pharmacy"
 TOPIC_CENTRE = "centre"
 
+GREETING_PATTERN = _compile_keyword_pattern(GREETING_KEYWORDS)
+
+
+def _strip_greetings(query_norm: str) -> str:
+    """Attend une chaîne déjà normalisée (normalize_text). Retire les salutations avant la
+    résolution de sujet et la recherche vectorielle : sans ça, une question du type 'Salut,
+    comment tu vas ?? Quels sont les symptômes du palu ?' se découpe (via le split sur '?')
+    en une sous-question parasite ('comment tu vas') qui pollue le contexte récupéré avec des
+    résultats hors sujet. Le LLM reçoit toujours `query` en clair dans le prompt final, pour
+    répondre avec un ton naturel à la salutation."""
+    cleaned = GREETING_PATTERN.sub("", query_norm)
+    cleaned = re.sub(r"\s+", " ", cleaned).strip(" ?!.,")
+    return cleaned if cleaned else query_norm
+
 
 def _last_explicit_topic(history):
     """Remonte l'historique EN NE CONSIDÉRANT QUE LES MESSAGES UTILISATEUR, du plus récent
@@ -197,8 +218,15 @@ class RAGEngine:
 
     def _build_retrieval_query(self, query: str, history=None) -> str:
         """Enrichit une question courte et ambiguë avec la question précédente, pour que la
-        recherche vectorielle ne perde pas le fil du sujet (ex: 'quelles mesures alors ?')."""
+        recherche vectorielle ne perde pas le fil du sujet (ex: 'quelles mesures alors ?').
+        Ne s'applique JAMAIS si la question porte déjà, à elle seule, un sujet reconnaissable
+        (ex: 'Nutrition pendant la grossesse') : dans ce cas, l'enrichir avec le tour précédent
+        risquerait au contraire de polluer la recherche avec un sujet sans rapport."""
         if not history or len(query.split()) > CONTINUITY_WORD_LIMIT:
+            return query
+
+        query_norm = normalize_text(query)
+        if HEALTH_TOPIC_PATTERN.search(query_norm) or CENTRE_PATTERN.search(query_norm):
             return query
 
         last_user_message = ""
@@ -210,7 +238,7 @@ class RAGEngine:
         if last_user_message:
             return f"{last_user_message} {query}"
         return query
-
+    
     def _detect_city(self, query: str, history=None):
         """Cherche une ville dans la question, puis dans l'historique récent si absente."""
         query_norm = normalize_text(query)
@@ -322,16 +350,20 @@ class RAGEngine:
     def generate_answer(self, query: str, history=None):
         retrieval_start = time.time()
 
-        topic = self._resolve_topic(query, history)
+        # search_query : version normalisée ET débarrassée des salutations, utilisée pour
+        # TOUTE la résolution de sujet / recherche. `query` (original, avec la salutation)
+        # n'est réinjecté qu'au moment de construire le prompt final envoyé au LLM.
+        search_query = _strip_greetings(normalize_text(query))
+        topic = self._resolve_topic(search_query, history)
 
         if topic == TOPIC_PHARMACY:
-            scraping_query = self._build_pharmacy_query(query, history=history)
+            scraping_query = self._build_pharmacy_query(search_query, history=history)
             live_result = get_pharmacies_de_garde(scraping_query)
             context_text = format_for_llm(live_result)
             sources_meta = [{"source": "infossante.net (temps réel)", "score": 1.0}]
             retrieval_mode = "scraping_live"
         else:
-            sub_questions = [q.strip() for q in query.split("?") if q.strip()]
+            sub_questions = [q.strip() for q in search_query.split("?") if q.strip()]
 
             if len(sub_questions) > 1:
                 seen_texts = set()
@@ -342,11 +374,10 @@ class RAGEngine:
                             seen_texts.add(c["text"])
                             retrieved_chunks.append(c)
             else:
-                retrieval_query = self._build_retrieval_query(query, history)
+                retrieval_query = self._build_retrieval_query(search_query, history)
                 retrieved_chunks = self.retrieve(retrieval_query)
 
-            retrieved_chunks = self._retrieve_for_centre_query(query, history, retrieved_chunks, topic=topic)
-
+            retrieved_chunks = self._retrieve_for_centre_query(search_query, history, retrieved_chunks, topic=topic)
             context_text = "\n\n---\n\n".join(
                 f"[Source: {c['source']}]\n{c['text']}" for c in retrieved_chunks
             )
