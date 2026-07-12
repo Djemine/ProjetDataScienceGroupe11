@@ -58,7 +58,8 @@ def load_engine():
 
     if _needs_ingestion():
         print(" Base vide ou data/ modifié — ingestion en cours...")
-        subprocess.run(["python", "ingest.py"], check=True)
+        from ingest import run_ingestion
+        run_ingestion()
     else:
         print(" Base vectorielle déjà à jour, ingestion ignorée.")
 

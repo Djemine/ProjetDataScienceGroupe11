@@ -108,6 +108,9 @@ def main():
     with open(os.path.join(DB_DIR, ".data_hash"), "w") as f:
         f.write(compute_data_hash())
 
+def run_ingestion():
+    main()
+
 
 if __name__ == "__main__":
     main()
