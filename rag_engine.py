@@ -55,6 +55,15 @@ HEALTH_TOPIC_KEYWORDS = [
     "accouchement", "planning familial", "hygiene",
 ]
 
+# Marqueurs linguistiques d'une question de suivi elliptique. Une question courte n'hérite du
+# sujet précédent QUE si elle contient l'un de ces marqueurs : le seul critère de longueur
+# ("et à Bobo ?" vs "comment faire une soupe ?", 4 mots chacune) ne permet PAS de distinguer
+# une vraie ellipse conversationnelle d'une question totalement indépendante mais courte.
+CONTINUITY_MARKER_KEYWORDS = [
+    "et", "aussi", "encore", "sinon", "la-bas", "ici",
+    "autre", "autres", "pareil", "meme chose",
+]
+
 # Tout ce qui doit empêcher un routage vers le scraping pharmacie
 NON_PHARMACY_KEYWORDS = FACILITY_KEYWORDS + HEALTH_TOPIC_KEYWORDS
 
@@ -70,6 +79,16 @@ TOP_K = 8
 CENTRE_MERGE_CAP = 12          # nb de chunks gardés une fois le filtrage par ville appliqué
 CONTINUITY_WORD_LIMIT = 15     # au-delà, une question est traitée comme un nouveau sujet
 
+# Seuil de similarité minimum (score cosinus, 0 à 1) en dessous duquel un chunk récupéré est
+# considéré comme non pertinent et n'est PAS injecté dans le contexte transmis au modèle.
+# Heuristique calibrée de façon conservatrice à partir des scores observés lors de
+# l'évaluation (evaluate.py) : les correspondances réelles obtenaient des scores ≥ 0.54,
+# les questions hors-sujet un score sensiblement plus bas. Ce seuil réduit le risque
+# d'hallucination (le modèle reçoit un signal explicite d'absence de contexte pertinent
+# plutôt qu'un chunk à peine lié) mais reste un réglage empirique, pas une garantie absolue —
+# le respect du prompt système par le modèle n'est jamais garanti à 100 % (cf. rapport, section Limites).
+MIN_RELEVANCE_SCORE = 0.30
+
 CITY_SOURCE_FILES = {
     "ouagadougou": "centres_sante_ouagadougou.txt",
     "bobo-dioulasso": "centres_sante_bobo.txt",
@@ -84,7 +103,7 @@ MAX_TOKENS_ANSWER = 1500        # équilibre troncature / budget TPM disponible
 SYSTEM_PROMPT = """Tu es un assistant d'orientation et de prévention santé de premier niveau, destiné au grand public au Burkina Faso.
 
 RÈGLES STRICTES :
-1. Réponds UNIQUEMENT à partir des informations fournies dans le "CONTEXTE" ci-dessous.
+1. Réponds UNIQUEMENT à partir des informations fournies dans le "CONTEXTE" ci-dessous. Si la question porte sur un sujet totalement absent du contexte (cuisine, sport, actualité, etc.), réponds STRICTEMENT "Je n'ai pas cette information dans ma base de connaissances", même si tu connais la réponse par ailleurs. Ne complète JAMAIS une réponse avec tes connaissances générales, même partiellement.
 2. Si le contexte contient des informations pertinentes (même partielles) pour répondre à la question, utilise-les et réponds. Dis "Je n'ai pas cette information dans ma base de connaissances" UNIQUEMENT si le contexte ne contient RÉELLEMENT aucune information liée au sujet de la question — ne le dis jamais si le contexte contient des éléments pertinents, même si la liste n'est pas exhaustive.
 3. Ne donne JAMAIS de diagnostic médical définitif. Si la question porte sur un symptôme, une maladie ou une orientation de soin, rappelle qu'il s'agit d'une orientation de premier niveau, pas d'une consultation médicale. N'ajoute PAS ce rappel pour une question purement factuelle (voir règle 6).
 4. Le contexte peut contenir des extraits de protocoles cliniques officiels destinés aux agents de santé (définitions de cas, signes de gravité, posologies, noms de médicaments). Tu peux utiliser les définitions de cas et signes de gravité pour orienter l'utilisateur, mais NE CITE JAMAIS le nom d'un médicament, d'une molécule, ou d'une classe thérapeutique (ex: "quinine", "ACT", "paracétamol"), et NE DONNE JAMAIS de dosage ou de protocole de traitement détaillé : cela doit être décidé par un professionnel de santé après examen. Dis plutôt : "le choix du traitement doit être déterminé par un professionnel de santé au centre de santé, qui pourra vous prescrire ce qui est adapté à votre cas."
@@ -120,6 +139,7 @@ NON_PHARMACY_PATTERN = _compile_keyword_pattern(NON_PHARMACY_KEYWORDS)
 HEALTH_TOPIC_PATTERN = _compile_keyword_pattern(HEALTH_TOPIC_KEYWORDS)
 PHARMACY_WORD_PATTERN = _compile_keyword_pattern(["pharmacie", "pharmacies"])
 GARDE_PATTERN = _compile_keyword_pattern(["garde"])
+CONTINUITY_MARKER_PATTERN = _compile_keyword_pattern(CONTINUITY_MARKER_KEYWORDS)
 
 TOPIC_PHARMACY = "pharmacy"
 TOPIC_CENTRE = "centre"
@@ -141,16 +161,16 @@ def _strip_greetings(text: str) -> str:
         return cleaned if cleaned else text
 
 
+MAX_TOPIC_LOOKBACK_MESSAGES = 8  # ne remonte que les 8 derniers messages utilisateur
+
 def _last_explicit_topic(history):
     """Remonte l'historique EN NE CONSIDÉRANT QUE LES MESSAGES UTILISATEUR, du plus récent
-    au plus ancien, et renvoie le premier sujet explicite rencontré. On ignore volontairement
-    les messages de l'assistant : ses réponses peuvent contenir des mots comme "pharmacie" en
-    tant que simple repère géographique (ex: "près de la pharmacie Sotisse"), ce qui ne reflète
-    en rien l'intention de l'utilisateur et provoquerait un changement de sujet non désiré.
-    La remontée n'est pas limitée à une fenêtre fixe : elle gère donc naturellement les chaînes
-    de questions elliptiques ('Et à Bobo ?', 'Et à Banfora ?') quelle que soit leur longueur."""
+    au plus ancien, sur une fenêtre bornée (MAX_TOPIC_LOOKBACK_MESSAGES). Une fenêtre bornée
+    (plutôt qu'illimitée) évite qu'un sujet mentionné très tôt dans une longue session ne
+    "ressurgisse" à tort sur une question ultérieure totalement sans rapport."""
     if not history:
         return None
+    user_messages_checked = 0
     for m in reversed(history):
         if m.get("role") != "user":
             continue
@@ -159,8 +179,10 @@ def _last_explicit_topic(history):
             return TOPIC_PHARMACY
         if CENTRE_PATTERN.search(content_norm):
             return TOPIC_CENTRE
+        user_messages_checked += 1
+        if user_messages_checked >= MAX_TOPIC_LOOKBACK_MESSAGES:
+            break
     return None
-
 
 def _trim_history(history):
     """Ne garde que les derniers échanges pour l'appel Groq (résolution de sujet, filtrage
@@ -279,8 +301,7 @@ class RAGEngine:
     def _resolve_topic(self, query: str, history=None):
         """Point d'entrée UNIQUE pour déterminer le sujet de la question courante
         (pharmacie / centre de santé / aucun). is_pharmacy_query() et _is_centre_query()
-        s'appuient tous les deux sur cette même résolution : il n'existe donc plus d'ordre
-        d'appel implicite qui puisse faire gagner un sujet sur l'autre par accident.
+        s'appuient tous les deux sur cette même résolution.
         """
         query_norm = normalize_text(query)
 
@@ -304,10 +325,12 @@ class RAGEngine:
         if has_pharmacy_word or has_garde:
             return TOPIC_PHARMACY
 
-        # Question courte sans mot-clé explicite : probablement elliptique -> héritage du
-        # dernier sujet explicite exprimé par l'utilisateur (jamais déclenché par une simple
-        # ville, et jamais par un mot apparu incidemment dans une réponse de l'assistant).
-        if len(query_norm.split()) <= CONTINUITY_WORD_LIMIT:
+        # Question courte SANS mot-clé explicite : hérite du sujet précédent uniquement si
+        # elle contient un marqueur de continuité explicite ("et", "aussi", "une autre"...).
+        # La longueur seule ne suffit PAS à distinguer une vraie ellipse ("et à Bobo ?", 4 mots)
+        # d'une question totalement indépendante mais courte ("comment faire une soupe ?", 4
+        # mots aussi) : sans ce garde-fou, la seconde hérite à tort du sujet de la première.
+        if len(query_norm.split()) <= CONTINUITY_WORD_LIMIT and CONTINUITY_MARKER_PATTERN.search(query_norm):
             return _last_explicit_topic(history)
 
         return None
@@ -321,11 +344,8 @@ class RAGEngine:
         return topic == TOPIC_CENTRE
 
     def _retrieve_for_centre_query(self, query: str, history, retrieved_chunks, topic=None):
-        """Filtre/complète la recherche vectorielle par métadonnées quand une ville est connue,
-        car la seule similarité sémantique ne garantit pas de rester sur le bon fichier ville.
-        Exclut explicitement les fichiers des AUTRES villes du remplissage complémentaire,
-        pour éviter qu'une réponse sur Ouagadougou n'inclue des centres de Bobo (ou inversement)
-        simplement parce que le filtrage ciblé n'a pas suffi à remplir CENTRE_MERGE_CAP."""
+        """Filtre/complète la recherche vectorielle par métadonnées quand une ville est connue.
+        Exclut explicitement les fichiers des AUTRES villes du remplissage complémentaire."""
         if not self._is_centre_query(query, history, topic=topic):
             return retrieved_chunks
 
@@ -336,9 +356,6 @@ class RAGEngine:
         target_file = CITY_SOURCE_FILES.get(city, PROVINCE_SOURCE_FILE)
         other_city_files = set(CITY_SOURCE_FILES.values()) - {target_file}
 
-        # top_k large : les fichiers par ville sont courts (quelques dizaines de chunks max),
-        # on peut se permettre de les couvrir presque intégralement plutôt que de risquer
-        # de rater une section (ex: dentaire, cardiologie) faute de proximité sémantique.
         targeted = self.retrieve(query, top_k=20, where={"source": target_file})
 
         seen_texts = {c["text"] for c in targeted}
@@ -348,6 +365,19 @@ class RAGEngine:
         ]
         merged = targeted + filler
         return merged[:CENTRE_MERGE_CAP]
+
+    def _apply_relevance_floor(self, retrieved_chunks):
+        """Filtre anti-hallucination : si AUCUN chunk récupéré n'atteint MIN_RELEVANCE_SCORE,
+        on considère qu'il n'y a pas de contexte pertinent plutôt que d'injecter des chunks à
+        peine liés à la question. Cela donne au modèle un signal explicite et sans ambiguïté
+        (contexte vide) au lieu d'un contexte "bruité" qui peut favoriser l'hallucination.
+        Ne s'applique qu'à la recherche vectorielle ; le scraping pharmacie n'est pas concerné
+        (son score est toujours fixé à 1.0, cf. generate_answer)."""
+        if not retrieved_chunks:
+            return retrieved_chunks
+        if retrieved_chunks[0]["score"] < MIN_RELEVANCE_SCORE:
+            return []
+        return retrieved_chunks
 
     def generate_answer(self, query: str, history=None):
         retrieval_start = time.time()
@@ -389,20 +419,28 @@ class RAGEngine:
                 retrieved_chunks = self.retrieve(retrieval_query)
 
             retrieved_chunks = self._retrieve_for_centre_query(search_query, history, retrieved_chunks, topic=topic)
-            context_text = "\n\n---\n\n".join(
-                f"[Source: {c['source']}]\n{c['text']}" for c in retrieved_chunks
-            )
+            retrieved_chunks = sorted(retrieved_chunks, key=lambda c: -c["score"])
+            retrieved_chunks = self._apply_relevance_floor(retrieved_chunks)
 
-            best_score_by_source = {}
-            for c in retrieved_chunks:
-                src = c["source"]
-                if src not in best_score_by_source or c["score"] > best_score_by_source[src]:
-                    best_score_by_source[src] = c["score"]
+            if retrieved_chunks:
+                context_text = "\n\n---\n\n".join(
+                    f"[Source: {c['source']}]\n{c['text']}" for c in retrieved_chunks
+                )
+                best_score_by_source = {}
+                for c in retrieved_chunks:
+                    src = c["source"]
+                    if src not in best_score_by_source or c["score"] > best_score_by_source[src]:
+                        best_score_by_source[src] = c["score"]
+                sources_meta = [
+                    {"source": src, "score": round(score, 3)}
+                    for src, score in sorted(best_score_by_source.items(), key=lambda x: -x[1])
+                ]
+            else:
+                # Aucun chunk suffisamment pertinent : contexte explicitement vide plutôt que
+                # de transmettre un chunk à peine lié qui pourrait favoriser une hallucination.
+                context_text = "Aucun document pertinent trouvé dans la base de connaissances pour cette question."
+                sources_meta = []
 
-            sources_meta = [
-                {"source": src, "score": round(score, 3)}
-                for src, score in sorted(best_score_by_source.items(), key=lambda x: -x[1])
-            ]
             retrieval_mode = "recherche_vectorielle"
 
         retrieval_ms = round((time.time() - retrieval_start) * 1000)

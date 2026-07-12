@@ -1,5 +1,4 @@
-```markdown
-# Resultats d'evaluation -- 12/07/2026 10:47
+# Resultats d'evaluation -- 12/07/2026 15:14
 
 Ce fichier est genere automatiquement par `evaluate.py`. Les scores ci-dessous sont directement reutilisables dans la section Experimentation et evaluation du rapport technique.
 
@@ -32,8 +31,8 @@ Detail par scenario :
 ### Temps de reponse mesures
 | Question | Mode | Recherche (ms) | Generation (ms) |
 |---|---|---|---|
-| Quels sont les symptomes du paludisme chez l'enfan... | recherche_vectorielle | 22 | 12489 |
-| Quelle pharmacie est de garde a Ouagadougou ce soi... | scraping_live | 905 | 11278 |
+| Quels sont les symptomes du paludisme chez l'enfan... | recherche_vectorielle | 14 | 12233 |
+| Quelle pharmacie est de garde a Ouagadougou ce soi... | scraping_live | 848 | 12535 |
 
 ## 6. Scenarios de non-regression (bugs reellement rencontres)
 - Score global : **100%** (11/11 assertions)
@@ -55,5 +54,4 @@ Detail par scenario :
 - Numeros proposes au 2e tour : 25306168
 
 ---
-*Rapport genere automatiquement -- a joindre en annexe du rapport technique.*voici pour llma versatile la
-```
+*Rapport genere automatiquement -- a joindre en annexe du rapport technique.*
