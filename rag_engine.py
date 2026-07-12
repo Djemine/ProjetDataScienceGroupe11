@@ -78,15 +78,6 @@ GROQ_MODEL = "llama-3.3-70b-versatile"
 TOP_K = 8
 CENTRE_MERGE_CAP = 12          # nb de chunks gardés une fois le filtrage par ville appliqué
 CONTINUITY_WORD_LIMIT = 15     # au-delà, une question est traitée comme un nouveau sujet
-
-# Seuil de similarité minimum (score cosinus, 0 à 1) en dessous duquel un chunk récupéré est
-# considéré comme non pertinent et n'est PAS injecté dans le contexte transmis au modèle.
-# Heuristique calibrée de façon conservatrice à partir des scores observés lors de
-# l'évaluation (evaluate.py) : les correspondances réelles obtenaient des scores ≥ 0.54,
-# les questions hors-sujet un score sensiblement plus bas. Ce seuil réduit le risque
-# d'hallucination (le modèle reçoit un signal explicite d'absence de contexte pertinent
-# plutôt qu'un chunk à peine lié) mais reste un réglage empirique, pas une garantie absolue —
-# le respect du prompt système par le modèle n'est jamais garanti à 100 % (cf. rapport, section Limites).
 MIN_RELEVANCE_SCORE = 0.30
 
 CITY_SOURCE_FILES = {

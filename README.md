@@ -1,105 +1,105 @@
-# Assistant d'Orientation Médicale & Prévention (Option 3)
+# Assistant d'Orientation Médicale & Prévention
 
-Agent IA RAG (Retrieval-Augmented Generation) qui répond à des questions de santé de premier niveau (paludisme, dengue, nutrition, pharmacies de garde) à partir d'une base de connaissances locale.
+Projet réalisé dans le cadre du Master 1 IFOAD — Data Science 2026 (Option 3 : Agent d'Orientation Médicale & Prévention).
 
-## Architecture
+L'idée de départ : au Burkina Faso, trouver une pharmacie de garde ou un centre de santé, ou simplement avoir une info fiable sur le paludisme, la dengue ou la nutrition, ce n'est pas toujours simple. Ce projet propose un assistant conversationnel qui répond à ces questions à partir d'une base documentaire vérifiée, complétée par une recherche en temps réel pour les pharmacies de garde (dont la liste change chaque jour).
+
+## Comment ça marche
+
+L'agent ne se contente pas d'interroger un modèle de langage à l'aveugle. À chaque question, il détermine d'abord de quoi on parle réellement — un centre de santé, une pharmacie de garde, ou un sujet de santé publique — en tenant compte du fil de la conversation (une question comme "et à Bobo ?" doit être comprise dans son contexte). Selon le cas, il va chercher l'information soit dans une base vectorielle constituée à partir de documents officiels, soit en scrapant en direct un site listant les pharmacies de garde du jour.
 
 ```
 Question utilisateur
       │
       ▼
-Recherche vectorielle (ChromaDB + embeddings sentence-transformers)
+Résolution du sujet (pharmacie / centre de santé / thème santé)
+      │
+      ├── pharmacie de garde ──► scraping en direct (infossante.net)
+      │
+      └── sinon ──► recherche vectorielle (ChromaDB + sentence-transformers)
       │
       ▼
-Contexte pertinent récupéré (chunks + sources)
+Contexte assemblé + historique de conversation
       │
       ▼
-LLM (Groq - Llama 3.3 70B) avec prompt système anti-hallucination
+Génération de la réponse (Groq, Llama 3.3 70B) avec un prompt système
+qui interdit les diagnostics, les dosages, et les réponses hors-base
       │
       ▼
-Réponse + sources citées
+Réponse + sources affichées
 ```
 
-## Installation (5 minutes)
+## Sources documentaires
 
-1. **Créer un environnement virtuel et installer les dépendances**
+- **Liste du Réseau Médical ASK Gras Savoye Burkina** (annuaire de cliniques, hôpitaux et pharmacies pour Ouagadougou, Bobo-Dioulasso et les provinces)
+- **Guide des Diagnostics et Traitements** (GDT, mars 2024)
+- **Guide SIMR** (Système Intégré de Surveillance et de Riposte, 2012) pour la définition de cas de la dengue
+- Aide-mémoires de l'OMS (Bureau régional de la Méditerranée orientale) pour le paludisme et la dengue
+- Fiches de nutrition et de conseils généraux rédigées par l'équipe
+
+## Installation
+
 ```bash
 python -m venv venv
 source venv/bin/activate      # Windows : venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-2. **Obtenir une clé API Groq gratuite**
-   - Aller sur https://console.groq.com
-   - Créer un compte gratuit
-   - Générer une clé API (section "API Keys")
+Récupère une clé API gratuite sur [console.groq.com](https://console.groq.com), puis :
 
-3. **Configurer la clé**
 ```bash
 cp .env.example .env
-# puis éditer .env et coller ta clé : GROQ_API_KEY=gsk_xxxxx
+# éditer .env et coller la clé : GROQ_API_KEY=gsk_xxxxx
 ```
 
-## Utilisation
+## Lancer le projet
 
-### Étape 1 — Ingestion (vectorisation des documents)
+**1. Construire la base vectorielle** (à refaire si les fichiers dans `data/` changent) :
 ```bash
 python ingest.py
 ```
-Cela lit tous les fichiers `.txt` du dossier `data/`, les découpe en chunks, les transforme en vecteurs et les stocke dans `vectordb/` (ChromaDB).
 
-### Étape 2 — Lancer l'application
+**2. Démarrer le serveur :**
 ```bash
 uvicorn main:app --reload
 ```
-Puis ouvrir : http://127.0.0.1:8000
+L'interface est accessible sur http://127.0.0.1:8000
 
-### Étape 3 — Évaluer le système (rapport technique)
+**3. Évaluer la robustesse du système :**
 ```bash
 python evaluate.py
 ```
-Ce script teste :
-- **La pertinence** : la recherche vectorielle remonte-t-elle le bon document source pour chaque question ?
-- **Le taux d'hallucination** : l'agent dit-il "je ne sais pas" pour des questions hors de sa base de connaissances (au lieu d'inventer une réponse) ?
-
-Les résultats affichés (scores en %) sont directement réutilisables dans le rapport technique (section Évaluation).
+Ce script mesure la pertinence de la recherche vectorielle, la fiabilité du routage conversationnel, le taux de refus sur les questions hors-sujet, et écrit un résumé dans `evaluation_results.md`, réutilisable tel quel dans le rapport technique.
 
 ## Structure du projet
 
 ```
-agent-sante/
-├── data/                    # Base de connaissances (à enrichir avec de vraies données)
-│   ├── paludisme.txt
-│   ├── dengue.txt
-│   ├── nutrition.txt
-│   └── pharmacies_garde.txt  # ⚠️ données d'exemple, à remplacer par de vraies données scrapées
-├── vectordb/                # Base vectorielle ChromaDB (générée par ingest.py)
+agentRAGsante/
+├── data/                       # Corpus documentaire (voir "Sources" ci-dessus)
+├── vectordb/                   # Base ChromaDB générée par ingest.py
 ├── static/
-│   └── index.html           # Interface web du chat
-├── ingest.py                 # Étape 1 : collecte + vectorisation
-├── rag_engine.py              # Étape 2 : logique de l'agent (recherche + LLM)
-├── main.py                   # Étape 3 : API FastAPI
-├── evaluate.py                # Étape 4 : évaluation du système
+│   └── index.html              # Interface web
+├── ingest.py                   # Découpage + vectorisation du corpus
+├── rag_engine.py                # Logique de l'agent : routage, recherche, génération
+├── live_scraper.py              # Scraping des pharmacies de garde en temps réel
+├── main.py                     # API FastAPI
+├── evaluate.py                  # Tests de robustesse du système
+├── Dockerfile                  # Déploiement (Render / Hugging Face Spaces)
 ├── requirements.txt
 └── .env.example
 ```
 
-## Ce qu'il te reste à faire pour finaliser le projet
+## Déploiement
 
-1. **Remplir `data/pharmacies_garde.txt` avec de vraies données.**
-   Le fichier actuel contient des données d'exemple clairement indiquées comme telles.
-   Idée simple si tu manques de temps : contacte/vérifie manuellement 5 à 10 pharmacies de ta ville et note leurs infos de garde réelles — ça suffit pour un prototype de démonstration. Si tu veux scraper une vraie source, dis-le-moi et je peux t'aider à écrire le script BeautifulSoup.
+L'application est déployée sur Render : [agent-rag-santegroupe11.onrender.com](https://agent-rag-santegroupe11.onrender.com)
 
-2. **Enrichir les autres fichiers `data/*.txt` si tu as le temps**
-   (sources officielles OMS, Ministère de la Santé du Burkina Faso, etc.) pour rendre la base plus complète — sans copier de longs textes protégés, reformule les informations dans tes propres mots.
+## Limites connues
 
-3. **Déployer l'application**
-   Options gratuites : Render.com (recommandé pour FastAPI), Railway, ou Hugging Face Spaces (Docker). Dis-moi si tu veux le guide de déploiement.
+- La détection de ville dans les questions repose sur une correspondance exacte : une faute de frappe sur un nom de ville n'est pas reconnue.
+- Le respect strict du contexte documentaire par le modèle de langage n'est jamais garanti à 100 %, malgré les règles imposées dans le prompt système.
+- L'API Groq utilisée est soumise à des quotas (par minute et par jour) sur le palier gratuit, ce qui peut occasionnellement limiter la disponibilité du service.
+- Le corpus documentaire, bien que basé sur des sources officielles pour l'essentiel, reste d'un volume limité — il gagnerait à être enrichi.
 
-4. **Rédiger le rapport technique** en réutilisant :
-   - Le schéma d'architecture ci-dessus.
-   - Les choix de méthodologie (chunking à 800 caractères avec 150 de chevauchement, embeddings `all-MiniLM-L6-v2`, LLM Llama 3.3 70B via Groq).
-   - Les scores obtenus avec `evaluate.py`.
-   - Une section "Limites" : base de connaissances encore limitée, pas de mise à jour temps réel des pharmacies de garde, pas de vérification médicale professionnelle des contenus.
+## Équipe
 
-5. **Pousser le code sur GitHub** (dépôt obligatoire) avec ce `README.md`.
+Groupe 11 — Master 1 IFOAD, Data Science 2026
