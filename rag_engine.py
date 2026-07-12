@@ -53,6 +53,9 @@ HEALTH_TOPIC_KEYWORDS = [
     "diabete", "tension", "hypertension", "vaccin", "vaccins", "allaitement",
     "enfant", "enfants", "bebe", "bebes",
     "accouchement", "planning familial", "hygiene",
+    "fievre", "vomissements", "vomissement", "diarrhee", "toux",
+    "convulsions", "frissons", "maux de tete", "douleurs musculaires",
+    "symptome", "symptomes", "malade", "fatigue",
 ]
 
 # Marqueurs linguistiques d'une question de suivi elliptique. Une question courte n'hérite du
@@ -131,6 +134,7 @@ HEALTH_TOPIC_PATTERN = _compile_keyword_pattern(HEALTH_TOPIC_KEYWORDS)
 PHARMACY_WORD_PATTERN = _compile_keyword_pattern(["pharmacie", "pharmacies"])
 GARDE_PATTERN = _compile_keyword_pattern(["garde"])
 CONTINUITY_MARKER_PATTERN = _compile_keyword_pattern(CONTINUITY_MARKER_KEYWORDS)
+LEADING_ET_PATTERN = re.compile(r"^et\b")
 
 TOPIC_PHARMACY = "pharmacy"
 TOPIC_CENTRE = "centre"
@@ -321,9 +325,10 @@ class RAGEngine:
         # La longueur seule ne suffit PAS à distinguer une vraie ellipse ("et à Bobo ?", 4 mots)
         # d'une question totalement indépendante mais courte ("comment faire une soupe ?", 4
         # mots aussi) : sans ce garde-fou, la seconde hérite à tort du sujet de la première.
-        if len(query_norm.split()) <= CONTINUITY_WORD_LIMIT and CONTINUITY_MARKER_PATTERN.search(query_norm):
+        if len(query_norm.split()) <= CONTINUITY_WORD_LIMIT and (
+            CONTINUITY_MARKER_PATTERN.search(query_norm) or LEADING_ET_PATTERN.match(query_norm)
+        ):
             return _last_explicit_topic(history)
-
         return None
 
     def is_pharmacy_query(self, query: str, history=None) -> bool:
